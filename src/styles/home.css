@@ -1,0 +1,95 @@
+/* Main Container */
+.home-container {
+  margin-top: 100px;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #efd7e5;
+  padding-bottom: 50px;
+}
+
+/* Home Content */
+.home-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.home-content h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.2;
+  color: #8b5e83; /* Darker pink for contrast */
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* Bestseller Cards */
+.bestseller-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Individual Product Cards */
+.bestcards {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bestcards:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Images */
+.bestcards > img {
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Product Names */
+.bestcards h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  color: #8b5e83;
+  margin-top: 15px;
+}
+
+/* Add to Cart Button */
+.bestcards button {
+  background-color: #d991b2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  margin-top: 15px;
+}
+
+.bestcards button:hover {
+  background-color: #b76c92;
+  transform: translateY(-2px);
+}
