@@ -75,7 +75,6 @@ const Home = () => {
             <img src={product.image} alt={product.name || "Product Image"} />
             <h1>{product.name}</h1>
             <p>{product.description}</p>
-            <h3>₹{product.price}</h3>
           </div>
         ))}
       </div>

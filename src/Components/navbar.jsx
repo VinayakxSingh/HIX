@@ -32,6 +32,7 @@ const Navbar = () => {
           className="dropdown"
           onMouseEnter={() => setDropdownOpen(true)}
           onMouseLeave={() => setDropdownOpen(false)}
+          style={{ position: "relative" }}
         >
           <Link to="/product-ranges" className="dropdown-button">
             Product Ranges▼
