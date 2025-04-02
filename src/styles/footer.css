@@ -23,12 +23,18 @@
   line-height: 1.5;
 }
 
+.footer-input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
 .footer-container input {
   padding: 10px;
-  width: 250px;
+  width: 400px; /* Reduced width */
   border: none;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  border-radius: 5px 0 0 5px; /* Rounded only left corners */
 }
 
 .footer-social-icons {
@@ -63,4 +69,22 @@
 
 .footer-links a:hover {
   color: #f4a261;
+}
+
+.footer-container button {
+  width: min-content;
+  background-color: #b5838d;
+  color: white;
+  padding: 10px 15px; /* Reduced padding */
+  border: none;
+  border-radius: 0 5px 5px 0; /* Rounded only right corners */
+  font-size: 14px; /* Reduced font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  height: 40px;
+}
+
+.footer-container button:hover {
+  background-color: #8b5e75;
+  transform: scale(1.05);
 }

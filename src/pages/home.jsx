@@ -17,10 +17,10 @@ const Home = () => {
         console.log("Firebase Data:", response.data);
 
         if (response.data) {
-          // Extract the first object (Firebase auto-generated key)
+         
           const productData = Object.values(response.data)[0];
 
-          // Convert object into an array for mapping
+
           setBestsellers(Object.entries(productData));
         } else {
           console.log("❌ Vinayak Data nahi fetch ho raha", response);

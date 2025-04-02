@@ -6,6 +6,7 @@ import { FaFacebookF } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiPinterest } from "react-icons/si";
 import { FaLinkedinIn } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <div className="footer-container">
@@ -17,7 +18,10 @@ const Footer = () => {
           Be the first to know about new launches, exclusive vouchers, and more!
         </h3>
         <h3>Subscribe to our newsletter for updates straight to your inbox!</h3>
-        <input type="email" placeholder="E-mail address" />
+        <div className="footer-input-group">
+          <input type="email" placeholder="E-mail address" />
+          <button type="submit">Submit</button>
+        </div>
       </div>
       <div className="footer-social-icons">
         <BiLogoInstagram />
@@ -36,4 +40,5 @@ const Footer = () => {
     </div>
   );
 };
+
 export default Footer;
