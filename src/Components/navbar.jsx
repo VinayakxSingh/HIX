@@ -42,7 +42,7 @@ const Navbar = () => {
               <Link to="/product-ranges">Lip-Gloss</Link>
 
               <br />
-              <Link to="/product-ranges/concealers">Concealers</Link>
+              <Link to="/product-ranges">Concealers</Link>
               <br />
               <Link to="/product-ranges">Hair Serums</Link>
             </div>
