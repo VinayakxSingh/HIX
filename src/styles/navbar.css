@@ -19,7 +19,6 @@
   padding: 0 100px;
   box-sizing: border-box;
   z-index: 1000; /* Added z-index to ensure it stays on top */
-  border-bottom: solid rgb(0, 0, 0);
 }
 
 #navbar-middle {
@@ -35,6 +34,7 @@
   right: 0;
   margin-right: 0;
   padding-right: 0;
+  text-shadow: 1px #5a3e3e;
 }
 
 .nav-links a {

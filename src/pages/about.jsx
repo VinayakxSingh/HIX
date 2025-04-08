@@ -1,10 +1,9 @@
 import React from "react";
-
+import "../styles/about.css";
 const About = () => {
   return (
     <div style={{ marginTop: "100px" }}>
-      <h1>About Us</h1>
-      <p>This page contains information about our company.</p>
+      <h1>to be made by rinki</h1>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Navbar from "../Components/navbar";
 import Hero from "../Components/herosection";
 import "../styles/home.css";
 import axios from "axios";
-
+import WhyChooseUs from "../Components/whyus.jsx";
 const Home = () => {
   const [bestsellers, setBestsellers] = useState([]);
 
@@ -14,19 +14,15 @@ const Home = () => {
           "https://hixcosmetics-default-rtdb.firebaseio.com/products/-OMd69SZhO3oGC_mTaD3.json"
         );
 
-        console.log("Firebase Data:", response.data);
-
         if (response.data) {
-         
           const productData = Object.values(response.data)[0];
-
 
           setBestsellers(Object.entries(productData));
         } else {
-          console.log("❌ Vinayak Data nahi fetch ho raha", response);
+          console.log("Vinayak Data nahi fetch ho raha", response);
         }
       } catch (error) {
-        console.error("❌ Error fetching bestsellers from Firebase:", error);
+        console.error("Error fetching bestsellers from Firebase:", error);
       }
     };
 
@@ -78,6 +74,7 @@ const Home = () => {
           </div>
         ))}
       </div>
+      <WhyChooseUs />
     </div>
   );
 };
