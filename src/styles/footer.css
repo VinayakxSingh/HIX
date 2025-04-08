@@ -31,9 +31,9 @@
 
 .footer-container input {
   padding: 10px;
-  width: 400px; /* Reduced width */
+  width: 400px;
   border: none;
-  border-radius: 5px 0 0 5px; /* Rounded only left corners */
+  border-radius: 5px 0 0 5px;
 }
 
 .footer-social-icons {

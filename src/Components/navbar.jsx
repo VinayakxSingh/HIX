@@ -27,7 +27,6 @@ const Navbar = () => {
         <Link to="/events">Events</Link>
         <br />
 
-        {/* Dropdown for Product Ranges */}
         <div
           className="dropdown"
           onMouseEnter={() => setDropdownOpen(true)}

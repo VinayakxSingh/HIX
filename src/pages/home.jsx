@@ -45,7 +45,7 @@ const Home = () => {
             width: "100%",
             textDecoration: "underline",
             fontStyle: "italic",
-            textAlign: "center", // Optional: Centers the text
+            textAlign: "center",
           }}
         >
           Our Bestsellers

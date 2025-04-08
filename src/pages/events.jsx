@@ -30,7 +30,7 @@ const Events = () => {
         const res = await axios.get(
           "https://hixcosmetics-default-rtdb.firebaseio.com/Events.json"
         );
-        const data = Object.values(res.data)[0]; // get the array inside the key
+        const data = Object.values(res.data)[0];
         setEventsData(data);
       } catch (err) {
         console.error("Error fetching events:", err);

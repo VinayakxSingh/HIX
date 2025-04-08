@@ -58,11 +58,21 @@ const Footer = () => {
         </form>
       </div>
       <div className="footer-social-icons">
-        <BiLogoInstagram />
-        <FaFacebookF />
-        <FaXTwitter />
-        <SiPinterest />
-        <FaLinkedinIn />
+        <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <BiLogoInstagram />
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noreferrer">
+          <FaFacebookF />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noreferrer">
+          <FaXTwitter />
+        </a>
+        <a href="https://pinterest.com" target="_blank" rel="noreferrer">
+          <SiPinterest />
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+          <FaLinkedinIn />
+        </a>
       </div>
       <div className="footer-links">
         <Link to="/about">About us</Link>

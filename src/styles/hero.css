@@ -1,27 +1,3 @@
-@keyframes slideInBackground {
-  0% {
-    background-position: center top;
-  }
-  50% {
-    background-position: center center;
-  }
-  100% {
-    background-position: center bottom;
-  }
-}
-
-@keyframes floatUp {
-  78% {
-    transform: translateY(10px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(10px);
-  }
-}
-
 .hero-container {
   background: url("/images/lipstick.png") no-repeat center top;
   background-size: cover;
@@ -31,8 +7,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: sticky;
-  animation: slideInBackground 10s ease-in-out infinite alternate; /* Moving background effect */
+  position: relative;
+  animation: slideInBackground 10s ease-in-out infinite alternate;
   overflow: hidden;
 }
 
@@ -43,55 +19,59 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Add overlay for better text contrast */
+  background: rgba(0, 0, 0, 0.4); /* darker overlay for better contrast */
   z-index: 0;
 }
+
+#summersale {
+  z-index: 1;
+  text-align: center;
+}
+
 #summersale h1 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   font-size: 64px;
   line-height: 1.2;
   color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin: 0;
-  text-align: center;
-  position: relative; /* Reset to relative position */
-  top: 0; /* Remove animation-based positioning */
-  z-index: 1;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
+
 .hero-button {
   z-index: 1;
-  margin-top: 20px;
-  padding: 15px 30px;
+  margin-top: 24px;
+  padding: 16px 36px;
   font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
   letter-spacing: 1px;
   text-transform: uppercase;
-
-  font-weight: 500;
-  font-size: 18px;
 
   color: #000;
   background-color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  text-transform: uppercase;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease; /* Ensures smooth transitions on hover */
   position: relative;
-  left: 90px; /* Adds stacking context to prevent interference */
+  left: 5px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
-.hero-button:hover {
-  background-color: #f2dee9; /* Hover background color */
-  transform: scale(1.05); /* Slightly enlarges the button */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #f2dee9;
+  transform: scale(1.04);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  outline: none;
 }
 
 .hero-button:active {
-  transform: scale(0.95); /* Shrinks slightly on click */
-  background-color: #fcb9c3; /* Active background color */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  transform: scale(0.96);
+  background-color: #fcb9c3;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
