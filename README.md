@@ -1,12 +1,63 @@
-# React + Vite
+# 💄 HIX Cosmetics
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive web application for a fictional cosmetics brand — showcasing a clean UI, authentication, product sections, and animated elements. Built using **React**, **Firebase**, and **CSS/Chakra UI**.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [https://hix-cosmetics.netlify.app](https://hix-cosmetics.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔐 **Firebase Auth**: Email/password login, signup, and secure authentication
+- 🖼️ **Product Showcase**: Clean layout for displaying products
+- 📅 **Events Page**: Highlights upcoming campaigns with animation effects
+- 📬 **Contact Form**: Firebase-linked form for customer inquiries
+- 🎨 **CSS Animations**: Keyframe-based transitions and subtle visual effects
+- 🌙 Light/Dark support via Chakra UI
+
+---
+
+## 🛠️ Tech Stack
+
+- **React.js**
+- **Firebase (Auth & Firestore)**
+- **Chakra UI**
+- **CSS3**
+- **Netlify** (for deployment)
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![Home](public/screenshots/home.png)
+
+### 🔐 Auth Page
+
+![Auth](public/screenshots/auth.png)
+
+### 📬 Contact Page
+
+![Contact](public/screenshots/contact.png)
+
+### 📅 Events Page
+
+![Events](public/screenshots/events.png)
+
+---
+
+## 📁 Folder Structure
+
+---
+
+## 👨‍💻 Developer
+
+**Vinayak Singh**  
+React enthusiast | DOM Specialist | Full-Stack Web Developer  
+📧 vinayaksinghforyou@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/vinayak-singh-8ab2442ab)
+
+---
+
+> 🚧 This project is actively maintained and open for collaboration!
