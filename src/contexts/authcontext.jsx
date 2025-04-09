@@ -53,8 +53,6 @@ export const AuthProvider = ({ children }) => {
   const googleSignIn = async () => {
     const result = await signInWithPopup(auth, provider);
     const user = result.user;
-
-    // Save the displayName as username if not already in DB
     const usernameRef = ref(database, `users/${user.uid}/username`);
     const snapshot = await get(usernameRef);
     if (!snapshot.exists()) {

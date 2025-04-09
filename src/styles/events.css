@@ -1,4 +1,3 @@
-/* Slideshow container */
 .hero-slider {
   position: relative;
   width: 100%;
@@ -9,7 +8,6 @@
   justify-content: center;
 }
 
-/* Individual slides */
 .hero-slider .slide {
   position: absolute;
   width: 100%;
@@ -20,16 +18,14 @@
   border-radius: 12px;
 }
 .event-card:nth-child(10) {
-  grid-column: 2 / span 1; /* Start from 2nd column, span 1 */
+  grid-column: 2 / span 1;
 }
 
-/* Active slide */
 .hero-slider .slide.active {
   opacity: 1;
   z-index: 1;
 }
 
-/* Overlay text on slideshow */
 .hero-overlay {
   position: absolute;
   top: 50%;
@@ -64,7 +60,6 @@
   font-style: normal;
 }
 
-/* Events section */
 .events-page {
   padding: 60px 30px;
   background: #fff0f6;
@@ -117,7 +112,6 @@
   margin-top: 30px;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .hero-slider {
     height: 300px;

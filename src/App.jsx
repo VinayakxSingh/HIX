@@ -11,6 +11,7 @@ import Hero from "./Components/herosection.jsx";
 import Footer from "./Components/footer.jsx";
 import Privacy from "./pages/privacypolicy.jsx";
 import TermsandConditions from "./pages/terms&conditions.jsx";
+import NotFound from "./pages/notfound.jsx";
 function App() {
   return (
     <Router>
@@ -24,6 +25,7 @@ function App() {
         <Route path="login/signup" element={<Auth />} />
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/termsandconditions" element={<TermsandConditions />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>
