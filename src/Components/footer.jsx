@@ -49,6 +49,7 @@ const Footer = () => {
                 onChange={(e) => {
                   setemail(e.target.value);
                 }}
+                required
               />
               <button type="submit" id="footer-submit-button">
                 Submit

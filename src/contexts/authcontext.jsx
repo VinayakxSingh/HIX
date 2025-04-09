@@ -60,7 +60,9 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const logout = () => signOut(auth);
+  function logout() {
+    return signOut(auth);
+  }
 
   return (
     <AuthContext.Provider
