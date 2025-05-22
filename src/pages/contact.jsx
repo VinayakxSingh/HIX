@@ -1,78 +1,128 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/contact.css";
-import axios from "axios";
 
 const Contact = () => {
-  //
-  const handlesubmit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const formsdata = new FormData(form);
-    const data = Object.fromEntries(formsdata.entries());
-    // console.log("data is created ", data);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-    try {
-      let post = await axios.post(
-        "https://hixcosmetics-default-rtdb.firebaseio.com/contact-form.json",
-        data
-      );
-      console.log(data, `is posted to db`, post);
-    } catch (error) {
-      console.error(error);
-    }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
-  //
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log("Form submitted:", formData);
+  };
+
+  useEffect(() => {
+    if (window.AOS) {
+      window.AOS.init({ duration: 1000 });
+    }
+  }, []);
+
   return (
     <div className="contact-container">
-      <h1>Contact Us</h1>
-      <p>Have a question or need support? Fill out the form below!</p>
+      <div className="contact-hero" data-aos="fade-down">
+        <h1>Get in Touch</h1>
+        <p>We'd love to hear from you</p>
+      </div>
 
-      <div className="contact-form">
-        <form action="submit" onSubmit={handlesubmit}>
-          <label htmlFor="name">Full Name</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-            required
-          />
-
-          <label htmlFor="email">Email Address</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          />
-
-          <label htmlFor="issues">What do you need help with?</label>
-          <div className="select-wrapper">
-            <select name="issues" required>
-              <option value="order">Order Issues</option>
-              <option value="payment">Payment Problems</option>
-              <option value="technical">Technical Support</option>
-              <option value="product">Product Inquiry</option>
-              <option value="shipping">Shipping & Delivery</option>
-              <option value="returns">Returns & Refunds</option>
-              <option value="account">Account & Login</option>
-              <option value="feedback">Give Feedback</option>
-              <option value="other">Other</option>
-            </select>
+      <div className="contact-content">
+        <div className="contact-info" data-aos="fade-right">
+          <div className="info-card">
+            <h3>Contact Information</h3>
+            <div className="info-item">
+              <i className="fas fa-map-marker-alt"></i>
+              <p>123 Beauty Street, New York, NY 10001</p>
+            </div>
+            <div className="info-item">
+              <i className="fas fa-phone"></i>
+              <p>+1 (555) 123-4567</p>
+            </div>
+            <div className="info-item">
+              <i className="fas fa-envelope"></i>
+              <p>info@beautybrand.com</p>
+            </div>
           </div>
 
-          <label htmlFor="message">Your Message</label>
-          <textarea
-            name="message"
-            placeholder="Write your message here..."
-            rows="4"
-            required
-          ></textarea>
+          <div className="social-links">
+            <h3>Follow Us</h3>
+            <div className="social-icons">
+              <a href="#" className="social-icon">
+                <i className="fab fa-facebook"></i>
+              </a>
+              <a href="#" className="social-icon">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="#" className="social-icon">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="#" className="social-icon">
+                <i className="fab fa-pinterest"></i>
+              </a>
+            </div>
+          </div>
+        </div>
 
-          <button type="submit" className="submit-button">
-            Send Message
-          </button>
-        </form>
+        <div className="contact-form" data-aos="fade-left">
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+            </div>
+            <button type="submit" className="submit-btn">
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

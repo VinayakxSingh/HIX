@@ -1,62 +1,52 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { CiHome } from "react-icons/ci";
+import { HiOutlineShoppingCart } from "react-icons/hi2";
 import "../styles/navbar.css";
-import { GoHome } from "react-icons/go";
 import { FaRegUser } from "react-icons/fa6";
 const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <div className="nav-container">
-      <div className="logo">
-        <Link to="/">
-          <GoHome size={30} color={"#000"} />
-        </Link>
-      </div>
-
-      <div>
-        <Link to="/about">
-          <img src="/images/Logo.png" alt="Logo" id="navbar-middle" />
-        </Link>
-      </div>
-
-      <div className="nav-links">
-        <Link to="/">Home</Link>
-        <br />
-        <Link to="/events">Events</Link>
-        <br />
-
-        <div
-          className="dropdown"
-          onMouseEnter={() => setDropdownOpen(true)}
-          onMouseLeave={() => setDropdownOpen(false)}
-          style={{ position: "relative" }}
-        >
-          <Link to="/product-ranges" className="dropdown-button">
-            Product Ranges▼
-          </Link>
-          {dropdownOpen && (
-            <div className="dropdown-menu">
-              <Link to="/product-ranges">Lip-Gloss</Link>
-
-              <br />
-              <Link to="/product-ranges">Concealers</Link>
-              <br />
-              <Link to="/product-ranges">Hair Serums</Link>
-            </div>
-          )}
+    <nav className="navbar">
+      <div className="nav-container">
+        <div className="left-section">
+          <button className="menu-button" onClick={toggleMenu}>
+            <span className="menu-icon">☰</span>
+          </button>
+          <div className={`nav-links ${isMenuOpen ? "active" : ""}`}>
+            <Link to="/products" className="nav-link">
+              Products
+            </Link>
+            <Link to="/about" className="nav-link">
+              About
+            </Link>
+            <Link to="/contact" className="nav-link">
+              Contact
+            </Link>
+          </div>
         </div>
-        <br />
-        <Link to="/about">About Us</Link>
-        <br />
-        <Link to="/contact">Contact Us</Link>
-        <br />
-        <Link to="login/signup">
-          <FaRegUser />
-        </Link>
+
+        <div className="center-logo">
+          <Link to="/" className="logo-text">
+            <span className="logo-first">HIX</span>
+            <span className="logo-second">COSMETICS</span>
+          </Link>
+        </div>
+
+        <div className="right-section">
+          <Link to="/cart" className="nav-icon">
+            <HiOutlineShoppingCart />
+          </Link>
+          <Link to="login/signup" className="nav-icon">
+            <FaRegUser />
+          </Link>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

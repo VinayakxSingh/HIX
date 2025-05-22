@@ -34,32 +34,32 @@ const Home = () => {
       <Hero />
       <div className="home-content">
         <h1
-          style={{
-            marginBottom: 0,
-            fontFamily: "Bebas Neue, sans-serif",
-            fontWeight: 700,
-            fontSize: "64px",
-            lineHeight: 1.2,
-            color: "#fff",
-            display: "block",
-            width: "100%",
-            textDecoration: "underline",
-            fontStyle: "italic",
-            textAlign: "center",
-          }}
+        // style={{
+        //   marginBottom: 0,
+        //   fontFamily: "Bebas Neue, sans-serif",
+        //   fontWeight: 700,
+        //   fontSize: "64px",
+        //   lineHeight: 1.2,
+        //   color: "#fff",
+        //   display: "block",
+        //   width: "100%",
+        //   textDecoration: "underline",
+        //   fontStyle: "italic",
+        //   textAlign: "center",
+        // }}
         >
           Our Bestsellers
         </h1>
 
         <p
-          style={{
-            marginTop: 0,
-            fontFamily: "Bebas Neue, sans-serif",
-            fontWeight: 300,
-            fontSize: "34px",
-            lineHeight: 1.2,
-            color: "#fff",
-          }}
+        // style={{
+        //   marginTop: 0,
+        //   fontFamily: "Bebas Neue, sans-serif",
+        //   fontWeight: 300,
+        //   fontSize: "34px",
+        //   lineHeight: 1.2,
+        //   color: "#fff",
+        // }}
         >
           Our bestsellers are carefully curated to meet your needs. Browse
           through our collection
